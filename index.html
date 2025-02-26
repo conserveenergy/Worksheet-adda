@@ -3,55 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Physics Practice Resources</title>
     <style>
-        body{
-            height: 100vh;
-            width: 100vw;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        div{
+
+        body {
+            min-height: 100vh;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 2rem;
-            display: flex;
+        }
+
+        h1 {
             text-align: center;
-            align-items: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin: 1rem 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2980b9;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Physics Practice Resources</h1>
 
-    <div>
-        <ul>
-            <li>
-                <a href="Clock.html">digital clock</a>
+        <div class="grid-container">
+            <div class="section">
+                <h2>Individual Topics</h2>
+                <ul>
+                    <li><a href="Clock.html">Digital Clock</a></li>
+                    <li><a href="electric_charges__quantizationa_nd_conservation.pdf">Electric Charges and Fields Practice Problems</a></li>
+                    <li><a href="ampere_s_laws_and_applications.pdf">Ampere's Law and Applications</a></li>
+                    <li><a href="physics/electrostatics/coulomb's_law_and_electrostattic_force.pdf">Coulomb's Law and Electrostatic Force</a></li>
+                    <li><a href="1121.pdf">NEET GT3</a></li>
+                </ul>
+            </div>
 
-            </li>
-            <li>
-                <a href="electric_charges__quantizationa_nd_conservation.pdf"> Electric charges and fields practtice problems</a>
-            </li>
-            <li>
-                <a href="ampere_s_laws_and_applications.pdf"> Ampere's law and applications</a>
-            </li>
-            <li>
-                <a href="physics/electrostatics/coulomb's_law_and_electrostattic_force.pdf">coulomb's law and electrostatic force</a>
-            </li>
-            <li>
-                <a href="1121.pdf">neet gt3</a>
-            </li>
-        </ul>
-        
-    </div>
-    <div>
-        <h>
-            Chapterwise practice problems
-        </h>
-        <ul>
-            <li>
-                <a href="physics/electrostatics/electrostatics_worksheet_complete_chapter_100_questions.pdf">Electric charges and fields</a>
-            </li>
-            <li>
-                <a href="physics/current electricity/current_electricity_worksheet1.pdf">Current Electricity</a>
-            </li>
-        </ul>
+            <div class="section">
+                <h2>Chapterwise Practice Problems</h2>
+                <ul>
+                    <li><a href="physics/electrostatics/electrostatics_worksheet_complete_chapter_100_questions.pdf">Electric Charges and Fields</a></li>
+                    <li><a href="physics/current electricity/current_electricity_worksheet1.pdf">Current Electricity</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
