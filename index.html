@@ -4,143 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physics Practice Resources</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    min-height: 100vh;
-    width: 100%;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: linear-gradient(135deg, #f0f4f8 0%, #e0e7ef 100%);
-    color: #2d3748;
-    line-height: 1.7;
-    font-size: 16px;
-}
+        body {
+            min-height: 100vh;
+            width: 100%;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e0e7ef 100%);
+            color: #2d3748;
+            line-height: 1.7;
+            font-size: 16px;
+        }
 
-.container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
-}
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
 
-h1 {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: #1a202c;
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    text-transform: capitalize;
-}
+        h1 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1a202c;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            text-transform: capitalize;
+        }
 
-h2 {
-    font-size: 1.75rem;
-    color: #2c5282;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-}
+        h2 {
+            font-size: 1.75rem;
+            color: #2c5282;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
 
-.section {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .section {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
 
-ul {
-    list-style: none;
-}
+        ul {
+            list-style: none;
+        }
 
-li {
-    margin: 0.75rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-}
+        li {
+            margin: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
 
-li::before {
-    content: '•';
-    color: #3182ce;
-    font-size: 1.5rem;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
+        li::before {
+            content: '•';
+            color: #3182ce;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
 
-a {
-    text-decoration: none;
-    color: #3182ce;
-    font-size: 1.05rem;
-    font-weight: 500;
-    transition: color 0.2s ease, transform 0.2s ease;
-    display: inline-block;
-}
+        a {
+            text-decoration: none;
+            color: #3182ce;
+            font-size: 1.05rem;
+            font-weight: 500;
+            transition: color 0.2s ease, transform 0.2s ease;
+            display: inline-block;
+        }
 
-a:hover {
-    color: #e53e3e;
-    transform: translateX(4px);
-}
+        a:hover {
+            color: #e53e3e;
+            transform: translateX(4px);
+        }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-}
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Fixed 3-column grid */
+            gap: 2rem;
+        }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 1.5rem 1rem;
-    }
+        @media (max-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+            }
+        }
 
-    h1 {
-        font-size: 2.25rem;
-    }
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
 
-    h2 {
-        font-size: 1.5rem;
-    }
+            h1 {
+                font-size: 2.25rem;
+            }
 
-    .section {
-        padding: 1.5rem;
-    }
+            h2 {
+                font-size: 1.5rem;
+            }
 
-    .grid-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-}
+            .section {
+                padding: 1.5rem;
+            }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.875rem;
-    }
+            .grid-container {
+                grid-template-columns: 1fr; /* 1 column on small screens */
+                gap: 1.5rem;
+            }
+        }
 
-    a {
-        font-size: 1rem;
-    }
-}
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.875rem;
+            }
 
-/* Smooth scroll behavior */
-html {
-    scroll-behavior: smooth;
-}
+            a {
+                font-size: 1rem;
+            }
+        }
 
-/* Focus styles for accessibility */
-a:focus {
-    outline: 2px solid #3182ce;
-    outline-offset: 2px;
-    border-radius: 4px;
-}
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Focus styles for accessibility */
+        a:focus {
+            outline: 2px solid #3182ce;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
@@ -148,44 +154,43 @@ a:focus {
         <h1>Physics Practice Resources</h1>
 
         <div class="grid-container">
-            
             <div class="section">
                 <h2>Chapterwise Practice Problems</h2>
                 <ul>
                     <li><a href="physics/electrostatics/electrostatics_worksheet_complete_chapter_100_questions.pdf">Electric Charges and Fields -1</a></li>
-                    <li><a href="physics/current electricity/current_electricity_worksheet1.pdf">Current Electricity sheet - 1 </a></li>
-                    <li><a href="physics/magnetism/magnetism1.pdf"> Magnetism Set - 1</a></li>
-                    <li><a href="physics/current electricity/current_electricity_worksheet_2.pdf"> Current Electricity seet -2</a></li>
-                    <li> <a href="physics/motion straight line/motion_in_one_dimension___1.pdf">Motion in a straight line - 1 </a></li>
-                    <li> <a href="physics/motion straight line/motion_in_one_dimension_sheet__2.pdf">Motion in a straight line -2 (graphs)</a></li>
-                    <li><a href="physics/current electricity/eapcet_current_elec_ws.pdf">current electricity eapcet worksheet</a></li>
+                    <li><a href="physics/current electricity/current_electricity_worksheet1.pdf">Current Electricity sheet - 1</a></li>
+                    <li><a href="physics/magnetism/magnetism1.pdf">Magnetism Set - 1</a></li>
+                    <li><a href="physics/current electricity/current_electricity_worksheet_2.pdf">Current Electricity sheet - 2</a></li>
+                    <li><a href="physics/motion straight line/motion_in_one_dimension___1.pdf">Motion in a straight line - 1</a></li>
+                    <li><a href="physics/motion straight line/motion_in_one_dimension_sheet__2.pdf">Motion in a straight line - 2 (graphs)</a></li>
+                    <li><a href="physics/current electricity/eapcet_current_elec_ws.pdf">Current Electricity EAPCET worksheet</a></li>
                 </ul>
             </div>
 
             <div class="section">
                 <h2>Individual Topics</h2>
                 <ul>
-                    <li><a href="physics/current electricity/current_electricity_worksheet_for_eapcet_mathematics___1.pdf">Current electricity eapcet</a>
+                    <li><a href="physics/current electricity/current_electricity_worksheet_for_eapcet_mathematics___1.pdf">Current Electricity EAPCET</a></li>
                     <li><a href="clock.html">Digital Clock</a></li>
                     <li><a href="electric_charges__quantizationa_nd_conservation.pdf">Electric Charges and Fields Practice Problems</a></li>
                     <li><a href="ampere_s_laws_and_applications.pdf">Ampere's Law and Applications</a></li>
                     <li><a href="physics/electrostatics/coulomb's_law_and_electrostattic_force.pdf">Coulomb's Law and Electrostatic Force</a></li>
                     <li><a href="students_roll_numbers.pdf">Students roll numbers</a></li>
-                    <li><a href="zoology46.jpeg">question numner 46</a></li>
-                    <li><a href="neet_week_10.pdf">question paper</a></li>
+                    <li><a href="zoology46.jpeg">Question number 46</a></li>
+                    <li><a href="neet_week_10.pdf">Question paper</a></li>
                     <li><a href="d9fc4fa3-7a91-433a-97c6-37b8e316f899.jpg">37</a></li>
-                    <li><a href="physics/tda/eapcet_mpc_key.jpeg">Mpc_eapcet key</a></li>
-                    <li><a href="physics/tda/neet_bipc_key.jpeg">Bipc key</a></li>
-                    <li><a href ="physics/tda/Eamcet_Sol_02_04_2025-.pdf">Solutions mpc</a></li>
+                    <li><a href="physics/tda/eapcet_mpc_key.jpeg">MPC EAPCET key</a></li>
+                    <li><a href="physics/tda/neet_bipc_key.jpeg">BIPC key</a></li>
+                    <li><a href="physics/tda/Eamcet_Sol_02_04_2025-.pdf">Solutions MPC</a></li>
                 </ul>
-            </div class="section">
+            </div>
+
+            <div class="section">
                 <h2>Toppers Destiny Academy</h2>
                 <ul>
-                    <li><a href="physics/tda/eapcet_short_term_test_2.jpeg">EAPCET MPC TEST -2 KEY</a>
-                    <li><a href="physics/tda/neet_short_term_test_2.jpeg">Eapcet/NEET test -2 key</a></li>
+                    <li><a href="physics/tda/eapcet_short_term_test_2.jpeg">EAPCET MPC TEST - 2 KEY</a></li>
+                    <li><a href="physics/tda/neet_short_term_test_2.jpeg">EAPCET/NEET test - 2 key</a></li>
                 </ul>
-            <div>
-                
             </div>
         </div>
     </div>
